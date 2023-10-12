@@ -20,12 +20,30 @@ def format_features(
 
 @app.get("/")
 def read_root():
-    return "Project Objectives"
+    result = """Welcome to the Sales Predicting and Forecasting API!
+
+Project Objectives:
+This project aims to provide accurate sales volume forecasts based on historical data and predictive modeling.
+
+Available Endpoints:
+- /health/
+- /sales/national/
+- /sales/stores/items/
+
+Expected Input Parameters:
+Each endpoint has specific input parameters that are described in their respective sections.
+
+Output Format:
+The API returns data in JSON format, including details about sales forecasts.
+
+GitHub Repository:
+For more information and access to the project's code, please visit our GitHub repository: [https://github.com/anikachauhan30/amla2]"""	
+    return result
 
 
 @app.get('/health', status_code=200)
 def healthcheck():
-    return 'Project is all ready to go!'
+    return 'Welcome to the Sales Predicting and Forecasting API. The API is up and running!'
 
 @app.get("/sales/national/")
 def forecast_sales(date: str):

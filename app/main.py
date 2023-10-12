@@ -20,7 +20,7 @@ def format_features(
 
 @app.get("/")
 def read_root():
-    return "Project Objectives"
+    return "GitHub Repository : https://github.com/anikachauhan30/amla2 "
 
 
 @app.get('/health', status_code=200)
