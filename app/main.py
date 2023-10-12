@@ -4,8 +4,8 @@ from joblib import load
 import pandas as pd
 
 app = FastAPI()
-predict_pipe = load('amla2/models/predictive/pred_best_model.joblib')
-forecast_pipe = load('amla2/models/forecasting/f_model.pkl')
+predict_pipe = load('../models/predictive/pred_best_model.joblib')
+forecast_pipe = load('../models/forecasting/f_model.pkl')
 
 def format_features(
     item_id: str,
